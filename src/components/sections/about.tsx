@@ -115,7 +115,7 @@ export function About() {
           >
             <Quote className="w-8 h-8 text-indigo mb-2" />
             <p className="text-sm italic text-muted-foreground">
-              "Le code est comme l'humour. Quand on doit l'expliquer, c'est mauvais."
+              &ldquo;Le code est comme l&apos;humour. Quand on doit l&apos;expliquer, c&apos;est mauvais.&rdquo;
             </p>
           </motion.div>
         </motion.div>
