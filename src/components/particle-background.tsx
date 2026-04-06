@@ -14,7 +14,7 @@ interface Particle {
 }
 
 export function ParticleBackground() {
-  const [particles, setParticles] = useState<Particle[]>(() =>
+  const [particles] = useState<Particle[]>(() =>
     Array.from({ length: 50 }, (_, i) => ({
       id: i,
       x: Math.floor(Math.random() * 100),
