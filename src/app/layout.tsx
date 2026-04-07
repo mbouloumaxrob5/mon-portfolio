@@ -6,6 +6,8 @@ import { Footer } from "@/components/footer";
 import { ThemeProvider } from "@/components/providers";
 import { ParticleBackground } from "@/components/particle-background";
 import { CustomCursor } from "@/components/custom-cursor";
+import { MeshGradient } from "@/components/mesh-gradient";
+import { FloatingShapes } from "@/components/floating-shapes";
 
 const inter = Inter({
   variable: "--font-sans",
@@ -110,6 +112,8 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <MeshGradient />
+          <FloatingShapes />
           <CustomCursor />
           <ParticleBackground />
           <Header />
