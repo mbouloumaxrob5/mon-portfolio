@@ -8,7 +8,6 @@ import { Menu, X, Download } from "lucide-react";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import logo_RS from "@/public/logo_RS.jpg";
 
 const navItems = [
   { label: "À propos", href: "#about" },
@@ -57,7 +56,7 @@ export function Header() {
                 className="relative w-10 h-10 rounded-xl overflow-hidden shadow-lg shadow-indigo/20"
               >
                 <Image
-                  src={logo_RS}
+                  src="/logo_RS.jpg"
                   alt="Maxwell MBOULOU"
                   width={40}
                   height={40}
