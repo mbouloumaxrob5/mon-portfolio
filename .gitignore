@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# security scan temp files
+5ee4d7b1-f673-46d1-80e8-7f66cb47c6b7.txt
