@@ -81,6 +81,15 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://maxwellmboulou.dev",
   },
+  manifest: "/manifest.json",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "Maxwell MBOULOU",
+  },
+  formatDetection: {
+    telephone: false,
+  },
 };
 
 export default function RootLayout({
