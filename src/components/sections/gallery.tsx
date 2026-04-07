@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight, X, ZoomIn } from "lucide-react";
@@ -22,13 +22,15 @@ export function PhotoGallery() {
   const openLightbox = (index: number) => setSelectedImage(index);
   const closeLightbox = () => setSelectedImage(null);
 
-  const navigateImage = (direction: "prev" | "next") => {
-    if (selectedImage === null) return;
-    const newIndex = direction === "prev" 
-      ? (selectedImage === 0 ? galleryImages.length - 1 : selectedImage - 1)
-      : (selectedImage === galleryImages.length - 1 ? 0 : selectedImage + 1);
-    setSelectedImage(newIndex);
-  };
+  const navigateImage = useCallback((direction: "prev" | "next") => {
+    setSelectedImage((prev) => {
+      if (prev === null) return null;
+      const newIndex = direction === "prev"
+        ? (prev === 0 ? galleryImages.length - 1 : prev - 1)
+        : (prev === galleryImages.length - 1 ? 0 : prev + 1);
+      return newIndex;
+    });
+  }, []);
 
   // Keyboard navigation
   useEffect(() => {
@@ -41,7 +43,7 @@ export function PhotoGallery() {
 
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [selectedImage]);
+  }, [selectedImage, navigateImage]);
 
   return (
     <section id="gallery" className="py-24 relative overflow-hidden">
