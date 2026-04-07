@@ -7,6 +7,7 @@ import { ArrowDown, Github, Linkedin, Mail, Code2, Smartphone, Monitor, Download
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
+import { TypewriterEffect } from "@/components/typewriter";
 
 const stats = [
   { value: "50+", label: "Projets réalisés" },
@@ -83,7 +84,7 @@ export function Hero() {
               </span>
             </motion.div>
 
-            {/* Title */}
+            {/* Title avec Typewriter */}
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -91,7 +92,15 @@ export function Hero() {
               className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-4"
             >
               <span className="block text-foreground">Full Stack</span>
-              <span className="block gradient-text">Developer</span>
+              <span className="block gradient-text">
+                <TypewriterEffect 
+                  words={["Developer", "Designer", "Architect", "Engineer"]} 
+                  className="gradient-text"
+                  typingSpeed={120}
+                  deletingSpeed={60}
+                  pauseDuration={2000}
+                />
+              </span>
             </motion.h1>
 
             {/* Subtitle */}
