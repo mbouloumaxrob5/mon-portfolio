@@ -13,7 +13,7 @@ const galleryImages = [
   { src: "/1046781.jpg", alt: "Inspiration", category: "Art", span: "col-span-1 row-span-2" },
   { src: "/475526.jpg", alt: "Abstraction", category: "Design", span: "col-span-1 row-span-1" },
   { src: "/image_1.jpg", alt: "Tech", category: "Tech", span: "col-span-1 row-span-1" },
-  { src: "/LogoRS.png", alt: "Logo RS", category: "Brand", span: "col-span-1 row-span-1" },
+  { src: "/logo_RS.jpg", alt: "Logo RS", category: "Brand", span: "col-span-1 row-span-1" },
 ];
 
 export function PhotoGallery() {

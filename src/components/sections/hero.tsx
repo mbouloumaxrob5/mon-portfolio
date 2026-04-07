@@ -170,7 +170,7 @@ export function Hero() {
                 className="text-base border border-indigo/30 hover:border-indigo/50 hover:bg-indigo/10"
               >
                 <a 
-                  href="/CV_Maxwell%20Yoan%20Roberto_MBOULOU%20(1)%20(1).pdf" 
+                  href="/CV_Maxwell_MBOULOU.pdf" 
                   download
                   target="_blank"
                   rel="noopener noreferrer"

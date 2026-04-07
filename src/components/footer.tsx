@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import logo_RS from "@/public/logo_RS.jpg";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Heart, Code2, ArrowUp } from "lucide-react";
@@ -53,10 +54,11 @@ export function Footer() {
                 className="relative w-10 h-10 rounded-xl overflow-hidden"
               >
                 <Image
-                  src="/LogoRS.png"
-                  alt="Logo RS"
-                  fill
-                  className="object-contain p-1"
+                  src={logo_RS}
+                  alt="Maxwell MBOULOU"
+                  width={40}
+                  height={40}
+                  className="rounded-full object-cover"
                 />
               </motion.div>
               <span className="text-xl font-bold gradient-text">Maxwell</span>

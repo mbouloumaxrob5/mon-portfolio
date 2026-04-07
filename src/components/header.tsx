@@ -8,6 +8,7 @@ import { Menu, X, Download } from "lucide-react";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import logo_RS from "@/public/logo_RS.jpg";
 
 const navItems = [
   { label: "À propos", href: "#about" },
@@ -56,11 +57,11 @@ export function Header() {
                 className="relative w-10 h-10 rounded-xl overflow-hidden shadow-lg shadow-indigo/20"
               >
                 <Image
-                  src="/LogoRS.png"
-                  alt="Logo RS"
-                  fill
-                  className="object-contain p-1 bg-linear-to-br from-indigo/20 to-cyan/20"
-                  priority
+                  src={logo_RS}
+                  alt="Maxwell MBOULOU"
+                  width={40}
+                  height={40}
+                  className="rounded-full object-cover"
                 />
               </motion.div>
               <span className="text-xl font-bold gradient-text tracking-tight hidden sm:block">
