@@ -61,8 +61,8 @@ export function ParticleBackground() {
       {/* Static gradient orbs for SSR / before mount */}
       {!mounted && (
         <>
-          <div className="absolute w-96 h-96 rounded-full bg-indigo/10 blur-3xl" style={{ left: '10%', top: '20%' }} />
-          <div className="absolute w-64 h-64 rounded-full bg-cyan/10 blur-3xl" style={{ right: '15%', bottom: '30%' }} />
+          <div className="absolute w-96 h-96 rounded-full bg-indigo/20 blur-3xl" style={{ left: '10%', top: '20%' }} />
+          <div className="absolute w-64 h-64 rounded-full bg-cyan/20 blur-3xl" style={{ right: '15%', bottom: '30%' }} />
         </>
       )}
 
@@ -71,29 +71,30 @@ export function ParticleBackground() {
         <>
           <motion.div
             style={{ x: orb1X, y: orb1Y }}
-            className="absolute w-96 h-96 rounded-full bg-indigo/10 blur-3xl"
+            className="absolute w-96 h-96 rounded-full bg-indigo/20 blur-3xl"
           />
           <motion.div
             style={{ x: orb2X, y: orb2Y }}
             transition={{ delay: 0.1 }}
-            className="absolute w-64 h-64 rounded-full bg-cyan/10 blur-3xl"
+            className="absolute w-64 h-64 rounded-full bg-cyan/20 blur-3xl"
           />
 
           {/* Floating particles */}
           {particles.map((particle) => (
             <motion.div
               key={particle.id}
-              className="absolute rounded-full bg-linear-to-br from-indigo/40 to-cyan/40"
+              className="absolute rounded-full bg-linear-to-br from-indigo/60 to-cyan/60 shadow-lg"
               style={{
                 left: `${particle.x}%`,
                 top: `${particle.y}%`,
                 width: particle.size,
                 height: particle.size,
+                boxShadow: '0 0 10px rgba(99, 102, 241, 0.5)',
               }}
               animate={{
                 y: [0, -30, 0],
                 x: [0, particle.randomX * 20 - 10, 0],
-                opacity: [0.2, 0.6, 0.2],
+                opacity: [0.4, 0.8, 0.4],
                 scale: [1, 1.2, 1],
               }}
               transition={{
@@ -109,8 +110,8 @@ export function ParticleBackground() {
           <svg className="absolute inset-0 w-full h-full">
             <defs>
               <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stopColor="rgba(99, 102, 241, 0.1)" />
-                <stop offset="100%" stopColor="rgba(6, 182, 212, 0.1)" />
+                <stop offset="0%" stopColor="rgba(99, 102, 241, 0.2)" />
+                <stop offset="100%" stopColor="rgba(6, 182, 212, 0.2)" />
               </linearGradient>
             </defs>
           </svg>

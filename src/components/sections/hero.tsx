@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { ArrowDown, Github, Linkedin, Mail, Code2, Smartphone, Monitor } from "lucide-react";
+import { ArrowDown, Github, Linkedin, Mail, Code2, Smartphone, Monitor, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
@@ -162,6 +162,22 @@ export function Hero() {
                 className="text-base"
               >
                 <Link href="#contact">Me contacter</Link>
+              </Button>
+              <Button
+                asChild
+                variant="secondary"
+                size="lg"
+                className="text-base border border-indigo/30 hover:border-indigo/50 hover:bg-indigo/10"
+              >
+                <a 
+                  href="/CV_Maxwell%20Yoan%20Roberto_MBOULOU%20(1)%20(1).pdf" 
+                  download
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Download className="mr-2 h-4 w-4" />
+                  Mon CV
+                </a>
               </Button>
             </motion.div>
 
